@@ -1,0 +1,12 @@
+@if (store.filteredTasks().length > 0) {
+  <ul class="divide-y divide-slate-100">
+    @for (task of store.filteredTasks(); track task.id) {
+      <app-task-item [task]="task" />
+    }
+  </ul>
+} @else {
+  <div class="flex flex-col items-center gap-2 py-10 text-slate-400">
+    <span class="text-4xl">📭</span>
+    <p>Nenhuma tarefa por aqui!</p>
+  </div>
+}
