@@ -1,59 +1,49 @@
-# AngularTodoList
+# Angular To-Do List
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.27.
+Uma lista de tarefas (To-Do List) construída em Angular, usada como projeto
+de portfólio para demonstrar as abordagens mais modernas do framework:
+Standalone Components e Signals.
 
-## Development server
+## Funcionalidades
 
-To start a local development server, run:
+- Adicionar tarefas (texto vazio é bloqueado)
+- Marcar tarefas como concluídas (estilo riscado/apagado)
+- Remover tarefas
+- Filtrar por Todas / Pendentes / Concluídas, em tempo real
+- Persistência automática no `localStorage` do navegador
+- Contador de tarefas pendentes
+- Estado vazio tratado ("Nenhuma tarefa por aqui!")
 
-```bash
-ng serve
-```
+## Tecnologias
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- [Angular 19](https://angular.dev/) — Standalone Components (sem NgModules)
+- [Signals](https://angular.dev/guide/signals) — `signal`, `computed` e
+  `effect` usados para todo o gerenciamento de estado, sem RxJS/Observables
+- TypeScript
+- [Tailwind CSS v4](https://tailwindcss.com/)
 
-## Code scaffolding
+## Como rodar localmente
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
+Pré-requisitos: Node.js 20.11+ (ou 18.19+/22+) e npm.
 
 ```bash
-ng build
+npm install
+npm start
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Acesse `http://localhost:4200` no navegador.
 
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+## Build de produção
 
 ```bash
-ng test
+npm run build
 ```
 
-## Running end-to-end tests
+Gera os arquivos estáticos em `dist/angular-todo-list/browser`, prontos
+para deploy em qualquer serviço de hospedagem estática (Vercel, Netlify,
+GitHub Pages) — o projeto não depende de nenhum backend próprio.
 
-For end-to-end (e2e) testing, run:
+## Screenshot
 
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+<!-- Adicione aqui um screenshot ou GIF do app rodando, por exemplo: -->
+<!-- ![Screenshot da aplicação](docs/screenshot.png) -->
