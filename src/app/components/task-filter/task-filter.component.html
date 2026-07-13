@@ -1,0 +1,15 @@
+<div class="flex flex-wrap gap-2">
+  @for (filter of filters; track filter.value) {
+    <button
+      type="button"
+      (click)="select(filter.value)"
+      [class.bg-indigo-600]="store.activeFilter() === filter.value"
+      [class.text-white]="store.activeFilter() === filter.value"
+      [class.bg-slate-100]="store.activeFilter() !== filter.value"
+      [class.text-slate-600]="store.activeFilter() !== filter.value"
+      class="rounded-full px-4 py-1.5 text-sm font-medium transition hover:opacity-90"
+    >
+      {{ filter.label }}
+    </button>
+  }
+</div>
