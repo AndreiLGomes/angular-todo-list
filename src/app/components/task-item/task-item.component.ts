@@ -6,6 +6,7 @@ import { TaskStoreService } from '../../services/task-store.service';
   selector: 'app-task-item',
   templateUrl: './task-item.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
+  host: { style: 'display: contents;' },
 })
 export class TaskItemComponent {
   private readonly store = inject(TaskStoreService);
