@@ -1,0 +1,16 @@
+<form class="flex gap-2" (submit)="submit(); $event.preventDefault()">
+  <input
+    type="text"
+    [value]="title()"
+    (input)="updateTitle($any($event.target).value)"
+    placeholder="Adicionar nova tarefa..."
+    aria-label="Nova tarefa"
+    class="flex-1 rounded-lg border border-slate-300 px-4 py-2 text-slate-800 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-200"
+  />
+  <button
+    type="submit"
+    class="rounded-lg bg-indigo-600 px-5 py-2 font-medium text-white transition hover:bg-indigo-700"
+  >
+    Adicionar
+  </button>
+</form>
