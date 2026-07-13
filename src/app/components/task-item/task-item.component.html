@@ -1,0 +1,30 @@
+<li class="flex items-center gap-3 border-b border-slate-100 py-3 last:border-b-0">
+  <input
+    type="checkbox"
+    [checked]="task().completed"
+    (change)="toggleComplete()"
+    [attr.aria-label]="'Marcar ' + task().title + ' como concluída'"
+    class="h-5 w-5 shrink-0 rounded border-slate-300 text-indigo-600 focus:ring-indigo-500"
+  />
+  <span
+    class="flex-1 text-slate-800"
+    [class.line-through]="task().completed"
+    [class.text-slate-400]="task().completed"
+  >
+    {{ task().title }}
+  </span>
+  <button
+    type="button"
+    (click)="remove()"
+    [attr.aria-label]="'Excluir ' + task().title"
+    class="shrink-0 rounded-full p-1.5 text-slate-400 transition hover:bg-red-50 hover:text-red-500"
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5">
+      <polyline points="3 6 5 6 21 6"></polyline>
+      <path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"></path>
+      <path d="M10 11v6"></path>
+      <path d="M14 11v6"></path>
+      <path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"></path>
+    </svg>
+  </button>
+</li>
