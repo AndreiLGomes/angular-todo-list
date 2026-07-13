@@ -1,11 +1,15 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { TaskStoreService } from './services/task-store.service';
+import { TaskFormComponent } from './components/task-form/task-form.component';
+import { TaskFilterComponent } from './components/task-filter/task-filter.component';
+import { TaskListComponent } from './components/task-list/task-list.component';
 
 @Component({
   selector: 'app-root',
-  imports: [],
+  imports: [TaskFormComponent, TaskFilterComponent, TaskListComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent {
-  title = 'angular-todo-list';
+  readonly store = inject(TaskStoreService);
 }
