@@ -45,5 +45,11 @@ GitHub Pages) — o projeto não depende de nenhum backend próprio.
 
 ## Screenshot
 
-<!-- Adicione aqui um screenshot ou GIF do app rodando, por exemplo: -->
-<!-- ![Screenshot da aplicação](docs/screenshot.png) -->
+<img width="741" height="520" alt="image" src="https://github.com/user-attachments/assets/6658a08c-5ae2-4fa6-b488-2401e272cffd" />
+
+<img width="687" height="484" alt="image" src="https://github.com/user-attachments/assets/2a9190a1-bd17-4110-9513-9bb06bf3f011" />
+
+<img width="718" height="474" alt="image" src="https://github.com/user-attachments/assets/55e958c5-6b82-4cae-a2b2-ebbe72aeb1f8" />
+
+
+
